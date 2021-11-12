@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC-login</title>
+    <style>
+       body{ 
+             background-color: black;
+           background-image: url("https://th.bing.com/th/id/OIP.0m__bgj2yW3oMAeB5tXp6QHaEo?w=262&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7");
+             background-size: 60%;
+        }  
+          #container{
+              width : 50%;
+              height : 500px ; 
+              border : 1px solid white ; 
+              margin : auto ; 
+              margin-top: 50px; 
+               background-image: url("https://th.bing.com/th/id/OIP.YIXDkYOfzviNF9RqJLZO0QHaFj?w=207&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7");
+             background-size: 100%;
+          } 
+           .login{
+               color : white ; 
+               margin : auto ; 
+               /* border : 1px solid white; */
+               width : 50%;
+               text-align : center; 
+               margin-top: 100px;
+           } 
+            .input {
+                width : 50%;
+                margin : auto ; 
+                margin-top: 40px;
+                text-align : center ; 
+                padding : 10px ; 
+             } 
+             .input>input {
+                 width : 70% ; 
+                 padding : 10px; 
+                 margin-top: 20px;
+             } 
+              button {
+                  width : 150px;
+                  margin-top: 40px ;
+                  padding : 10px ;
+                  border-radius: 30px;
+                  background-color: white;
+              }  
+              button>a{
+                  text-decoration: none;
+                  color : black ; 
+              }
+               button:hover{
+                   background-color: black;
+                   color : white;
+                   border : 2px solid white;
+                   color : white ;
+                    padding : 12px ; 
+                    font-size: 18px;
+                }
+                /* button>a:hover{
+                    color : white ; 
+                } */
+    </style>
+</head>
+<body>
+    <div id = "container">
+           <div class = "login"><h1>Login</h1></div>
+       <div class = "input">
+            <input  id = "email" type = "email" placeholder = "Enter email"/>
+            <input id = "pass" type = "password" placeholder = "Enter password"/>
+              <a style = "color:white; margin-left: 130px;" href = "signup.html">forgetPassword</a>
+            <br/>
+            <a href = "#"><button>Login</button></a>
+      </div>
+    </div>
+</body>
+<script>
+    document.querySelector("button").addEventListener("click", signin) ;
+      var regusers = JSON.parse(localStorage.getItem("KFC-UserData"));  
+       var detailarr = [] ;
+        var userDetails = {};
+         function signin(){
+           
+         var email = document.getElementById("email").value;
+         var pass = document.getElementById("pass").value ;
+            //console.log(email,pass);
+            var count = 0
+       for(var i = 0 ; i<regusers.length ; i++){ 
+        
+            if(regusers[i].emailAddresh===email && regusers[i].password===pass){
+                userDetails.Email = email ;
+                userDetails.Password = pass ;  
+                detailarr.push(userDetails);  
+                localStorage.setItem("KFC-loginDetails" , JSON.stringify(detailarr)); 
+                goToform(detailarr);
+                  alert("login successful"); 
+                    break ; 
+                     }  else if (email == "" || pass == ""){
+                           alert ("please fill the information")
+                             break;
+                        
+                     } else if(regusers[i].emailAddresh !=email || regusers[i].password !=pass){
+                          count++
+                     }
+                     
+
+               }  
+                 if(count==regusers.length){
+                      alert("user filled in wrong credentials");
+                    }   
+                // var userDetails = {
+                //     Email : email,
+                //     Password : pass,
+                // }
+            //     detailarr.push(userDetails);
+            //    localStorage.setItem("KFC-loginDetails" , JSON.stringify(detailarr));
+            //       goToform(detailarr);
+           }  
+           function goToform(detailarr){
+               window.location.href = "HOMEpage.html";
+           }
+</script>
+</html>

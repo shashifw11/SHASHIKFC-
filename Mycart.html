@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+   <style>
+         #nav{
+            width : 100%;
+            /* border : 1px solid red ;  */
+             height : 50px; 
+            padding-top: 20px;
+            /* position: fixed ;  */
+            background-color: white ; 
+          
+           
+         }
+          .nav1{
+              float: left;
+              width : 25%;
+              margin-left: 3%;
+              /* border: 1px solid red; */
+              /* padding : 25px; */
+              
+          } 
+          .nav2{
+              float: right;
+              width : 20%;
+               margin-right: 5%; 
+               /* border: 1px solid red; */
+              /* padding : 25px; */
+          }
+          .nav1>ul{
+              display : flex ;
+              justify-content:space-between;
+              font-weight: bold;
+              
+          } 
+          .nav2>ul{
+              display : flex ;
+              justify-content: space-around;
+              font-weight: bold;
+        }  
+        li{
+            list-style: none;
+        } 
+       a{
+            text-decoration: none;
+            color : black ; 
+        } 
+
+    .mid{
+        width : 100%;
+        height: 80px;
+        background-color: #202124;
+        color : white ; 
+         padding: 5px;
+        text-align: center;
+      
+        
+      }  
+      
+      button{
+           width : 200px;
+         background-color: black;
+          border-radius: 30px;
+          padding : 10px ; 
+          border : none ; 
+          color : white ; 
+          font-size: 20px;
+          border : 1px solid white; 
+      } 
+       .midBottom{
+           background-color: #f8f7f5;
+           width : 100%;
+           height : 100px;
+           margin-top: -23px;
+       }    
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        .footer{
+             background-color: #24262b;
+               margin : 0;
+              padding : 0; 
+              box-sizing: border-box;
+              font-family: 'Poppins', sans-serif;
+             height : 300px ; 
+  
+          }  
+          .contant{
+              width : 100% ; 
+              margin : auto ; 
+          } 
+           ul{
+              list-style : none ;   
+           }  
+            .row{
+                display : flex ; 
+                flex-wrap: nowrap;
+            }  
+  
+            .footer-col{
+                width : 25% ; 
+                padding : 0 15px ; 
+            } 
+            .footer-col h4{
+                 font-size: 18px;
+                 color : #ffffff;
+                 text-transform: capitalize;
+                 margin-bottom: 35px; 
+                 font-weight: 500; 
+                 position: relative;
+            }
+  
+  
+            .footer-col h4::before{
+                content : ' ';
+                position : absolute; 
+                left : 0;
+                bottom : -10px ; 
+                background-color: #e91e63; 
+                height : 2px ; 
+                box-sizing: border-box;
+                width : 50px;
+                
+            }
+             .footer-col ul li:not(:last-child){
+                  margin-bottom : 10px ; 
+             } 
+             .footer-col ul li a{
+                  font-size: 16px; 
+                  text-transform: capitalize;
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-weight: 300px;
+                  color : #bbbbbb;
+                  display: block;
+                  transition: all 0.3s ease;
+             }
+                 .footer-col ul li a:hover{
+                     color: #ffffff;
+                     padding-left: 10px;
+                 } 
+  
+                 .footer-col .social-link a{
+                       display: inline-block;
+                       height: 40px;
+                       width : 40px; 
+                       background-color: rgb(225,225,225,0.2);
+                       margin-right: 10px;
+                       margin: 0 10px 10px 0;
+                       text-align: center;
+                       line-height: 40px;
+                       border-radius: 50%;
+                       color : #ffffff ;  
+                       transition: all 0.5s ease;
+                 }  
+                  
+                 .footer-col .social-link a:hover{
+                     color : #24262b;
+                     background-color: #ffffff;
+                     
+                 }  
+     
+      .logo{
+          width : 90%;
+          height : 100px;
+          /* border :1px solid red ;  */
+          font-weight: bolder;
+          margin : auto ;
+      }  
+       #container{
+           display : flex;
+           width : 90%;
+           margin : auto ;
+           /* border : 1px solid red ; */
+           /* height : auto; ;  */
+          
+       }   
+
+       .mainDiv{
+           width : 65%;
+           height : 600px ;
+           /* border : 1px solid green ; */
+           margin : 4% ;  
+           height : auto ;
+       } 
+       
+    .imageDiv{
+            display : flex;
+           width : 100%;
+           height : 120px ; 
+           border : 1px solid black ; 
+           background-color:#f8f7f5;
+           margin-top : 0.5%;
+           border-radius: 5px;;
+    }   
+     .imageDiv>div{
+         width : 25%;
+         height : 100% ; 
+         justify-content: space-between;
+         /* border : 1px solid green ;  */
+     } 
+     .imageDiv>div:nth-child(2){
+         width : 50% ; 
+     }  
+      .incr,.dcr{
+        width : 100px;
+         background-color: white;
+          border-radius: 30px;
+          padding : 5px ; 
+          border : none ; 
+          color : black ; 
+          font-size: 20px;
+          border : 1px solid black ; ; 
+          margin-top: 7px;
+          margin-left: 8px ; ;
+          
+      }
+      .incr:hover,.dcr:hover{
+          background-color: black;
+          color: white ;
+       }
+       .incr>a:hover,.dcr>a:hover{
+           color : white ; 
+           
+       }
+       .cnt{
+           text-align: center;
+       } 
+
+
+     .img{
+         width : 25%;
+         height : 100%;
+         float : left ;
+         /* border: 1px solid red ; */
+
+     }
+         .pricediv{
+            text-align: center;
+            padding-top: 25px;
+            box-sizing: border-box;
+         }
+
+       .FAQ{
+           display : flex ;
+           width : 90%;
+           margin : auto ; 
+       } 
+      .FAQ>div{
+          width : 48% ;
+          height : 400px ; 
+          /* border : 1px solid blue ; */
+          margin : 2% ; 
+      } 
+    
+       .head {
+           margin-left : 30px ;
+           margin-bottom: 60px; 
+       }
+      .contact{
+          display : flex;
+          justify-content: space-around;
+          
+       } 
+         .contact>div>button{
+            width : 200px;
+         background-color: white;
+          
+          border-radius: 30px;
+          padding : 10px ; 
+          border : none ; 
+          color : black ; 
+          font-size: 20px;
+          border : 1px solid black ; 
+         } 
+       .FAQ>.select> p{
+             overflow: hidden;
+             text-overflow :clip;
+             text-align: justify;
+         }   
+
+         .item {
+           width : 30% ;
+           height : 400px ;
+           /* border : 1px solid brown ; */
+           margin : 4% ; 
+           padding : 20px ; 
+
+       } 
+       .item{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px;
+}
+    .subtotal {
+        display : flex ;
+        /* width : 100%; */
+        
+    } 
+     .subtotal div {
+          width : 48% ; 
+          height : 30px ; 
+          /* border : 1px solid red ;  */
+          margin-left: 5px;;
+          text-align: left;
+     } 
+     .subtotal>div:nth-child(2){
+         text-align: right ;
+         margin-right: 10px;
+     }
+     .gst {
+        display : flex ;
+        /* width : 100%; */
+        
+    } 
+     .gst div {
+          width : 48% ; 
+          height : 30px ; 
+          /* border : 1px solid red ;  */
+          margin-left: 5px;;
+          text-align: left;
+     } 
+     .gst>div:nth-child(2){
+         text-align: right ;
+         margin-right: 10px;
+     }
+     #checkout{
+        background-color: #e4002b;
+        width : 80%;
+        padding : 10px; 
+        padding : 10px ; 
+        margin : 20px 0 0 30px ; 
+    } 
+    #checkout>a{
+        color : white ; 
+    }
+    </style>
+</head>
+<body>
+    <div id = "nav">
+        <div class = "nav1">
+            <ul>
+                <a href = "HOMEpage.html"><li><img
+                 src= "https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt = "KFC"/></li></a>
+                 <a href = "menu.html"><li>Menu</li></a>
+                 <a href = "deals.html"><li>Deals</li></a>
+            </ul>
+         </div> 
+         <div class = "nav2">
+             <ul>
+             <a href="login.html"><li><i style = "font-size: 30px" class="fas fa-user-circle"></i>Sign In</li></a>
+             <a class = "total" href="MyCart.html"><li><i style = "font-size: 30px ; color : tomato" class="fas fa-shopping-cart"></i>Cart</li></a>
+             
+         </ul>
+         </div> 
+    </div> 
+    <div class = "mid">
+        <h4>LET'S ORDER FOR DELIVERY, TAKEAWAY, OR DINE-IN<button><a href="order.html" style = "color : white">Change</a></button></h4>
+    </div> 
+    <div class = "logo">
+    <h1>MY CART</h1>
+    </div> 
+   <div id = "container">
+      <div class = "mainDiv">
+          <!-- <div class = imageDiv>
+             <div class = "Image1">
+                <img src = ""
+                />
+             </div>  
+             <div class = "remove">
+                <h3 class = "Name1">Large Popcorn</h3>
+                <a class = "rmv" href = "#">removed</a>
+            </div>
+             <div class = "count">
+               <div class = "incr"><button><a href = "#">+</a></button></div>
+               <div class = "cnt">2</div>
+               <div class = "dcr"><button><a href = "#">-</a></button></div> 
+             </div>
+            <div class = "pricediv">
+                <p class = "Price1"></p>
+            </div>
+          </div> -->
+      </div>
+
+
+      <div class = "item">
+
+        <h3 style = "margin-left : 10px "> Count ITEMS</h3>
+        <div class = "apply">
+            <h3 style = "margin-left: 5px; color : red">Apply offers & Deals <button style = "width : 90px ; padding : 5px"><a  style = "color : white" href = "deals.html">View All</a></button></h3>
+        </div>
+        <div   class = "subtotal">
+            <div>SubTotal</div>
+            <div id = "Total"></div>
+        </div> 
+        <div   class = "gst">
+            <div>GST</div>
+            <div>%</div>
+        </div>
+        <hr/>
+        <div class = "checkbox">
+              <h4 style = "text-align: center;"><input  type = "checkbox" value = "₹6.00 Tick to add a large carry bag."/>₹6.00 Tick to add a large carry bag.</h4>
+        </div>
+        <hr/> 
+        <div class = "addhope">
+            <h4 style = "text-align: center; border : 2px solid gray ; width : 80% ; margin:auto "><input  type = "checkbox" value = "add hope"/>Donate ₹5.00 Tick to Add Hope.<br/>Our goal is to feed 20 million people by 2021.</h4>
+      </div> 
+     <button id = "checkout">CheckOut</button>
+    
+    </div>
+</div> 
+
+
+<div class = "FAQ">
+    <div class = "select">
+        <p>How can I change the information for my credit/debit card 
+            or select a different default payment method?<br/>
+            Absolutely! After selecting the location from which you’d 
+            like to order, you will see the menu screen, right below the
+             red KFC banner you can select ASAP or select a different date
+              and time. You can also change the pickup or delivery date and
+               time during the order review screen if you change your mind.</p>
+        <hr/>
+         <p>What to expect for delivery?<br/>
+            Absolutely! After selecting the location from which you’d like
+             to order, you will see the menu screen, right below the red KFC 
+             banner you can select ASAP or select a different date and time. 
+             You can also change the pickup or delivery date and time during 
+             the order review screen if you change your mind.
+        </p>
+        <hr/>
+        <p>How do I change or cancel my pickup order once I’ve placed my order?<br/>
+            Absolutely! After selecting the location from which you’d like to order, 
+            you will see the menu screen, right below the red KFC banner you can select 
+            ASAP or select a different date and time. You can also change the pickup or
+             delivery date and time during the order review screen if you change your 
+             mind.</p>
+    </div> 
+ <div> 
+ <div class = "head"><h2>STILL HAVE A QUESTION?</h2></div>
+    <div class = "contact"> 
+        
+        <div>
+            <button><a href = "#"><i class="fas fa-phone-alt"></i>call us</a></button>
+        </div>
+        <div>
+            <button><a href = "#"><i class="fas fa-envelope"></i>Contact Us</a></button>
+        </div>
+    </div> 
+</div>
+</div>
+
+
+
+
+
+
+    <footer class = "footer">
+        <div class = "contant">
+            <div class = "row">
+               <div class = "footer-col">
+                   <h4>KFC Food</h4>
+                   <ul>
+                       <li><a href = "#">Menu</a></li>
+                       <li><a href = "#">Order Lookup</a></li>
+                       <li><a href = "#">Gift card</a></li>
+                       
+                   </ul>
+               </div> 
+               <div class = "footer-col">
+                <h4>Support</h4>
+                <ul>
+                       <li><a href = "#">Get Help</a></li>
+                       <li><a href = "#">Contact Us</a></li>
+                       <li><a href = "#">KFC Feedback</a></li>
+                       
+                </ul>
+            </div>
+            <div class = "footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href = "#">Terms and Condition</a></li>
+                       <li><a href = "#">Privecy policy</a></li>
+                       <li><a href = "#">Disclamer</a></li>
+                       <li><a href = "#">Coution Notice</a></li>
+                       
+                </ul>
+            </div>
+            <div class = "footer-col">
+                <h4>KFC india</h4>
+                <ul>
+                    <li><a href = "#">About KFC</a></li>
+                    <li><a href = "#">KFC Care</a></li>
+                    <li><a href = "#">Careers</a></li>
+                   
+                </ul>
+            </div> 
+            <div class = "footer-col">
+                <h4>follow Us</h4>
+                <div class = "social-link">
+                    <a href = "#"><i class = "fab fa-facebook-f"></i></a> 
+                    <a href = "#"><i class = "fab fa-twitter"></i></a> 
+                    <a href = "#"><i class = "fab fa-instagram"></i></a> 
+                    <a href = "#"><i class = "fab fa-linkedin-in"></i></a> 
+                </div>
+            </div>
+            </div>
+    
+        </div> 
+    </footer>
+</body> 
+<script>
+     var cartItems = JSON.parse(localStorage.getItem("KFC-cartItems"));
+               console.log(cartItems);
+                 displayItem(cartItems);
+       
+       function  displayItem(cartItems){
+            cartItems.map(function(item){
+                  var img = document.createElement("img");
+                    img.setAttribute("class" , "Image1") 
+                      img.setAttribute("src" , item.image_url);
+                    //   imgDiv.append(img,Name,Price); 
+                       // console.log(img); 
+                  var Name = document.createElement("h3");
+                     Name.setAttribute("class" , "Name1")
+                     Name.textContent = item.name ;
+                      // console.log(Name) ; 
+                 var Price = document.createElement("h5");
+                     Price.setAttribute("class" , "Price1")
+                    Price.textContent = item.price; 
+                      //console.log(Price);
+                 var imgDiv = document.createElement("div");
+                   imgDiv.setAttribute("class","imageDiv")
+                    
+                    //  console.log(imgDiv); 
+                 var remove = document.createElement("div");
+                    remove.setAttribute("class","remove"); 
+                 remove.addEventListener("click", function(){
+                      removeItem(item);
+                 })
+                  var a = document.createElement("a");
+                     a.textContent = "remove";
+                    a.setAttribute("href","#"); 
+                    a.setAttribute("class","rmv") 
+                   
+                    // remove.append(Name,a);
+
+                 var count = document.createElement("div");
+                    count.setAttribute("class","count");
+                var btn1 = document.createElement("button");
+                 btn1.setAttribute("class" , "incr");
+                    btn1.innerHTML = '<a href="#">+</a>' 
+                var btn2 = document.createElement("button");
+                     btn2.setAttribute("class" , "dcr");
+                     btn2.innerHTML = '<a href="#">-</a>'
+                var cnt = document.createElement("div");
+                   cnt.setAttribute("class","cnt");
+                   cnt.textContent = "1" ; 
+                //   count.append(btn1,cnt,btn2);
+                var pricediv = document.createElement("div");
+                   pricediv.setAttribute("class" , "pricediv");
+                        // pricediv.append(Price);
+                    var imageDiv = document.createElement("div");
+                       imageDiv.setAttribute("class","imageDiv");
+                    // imageDiv.append(img,remove,count,pricediv)
+                  var mainDiv = document.querySelector(".mainDiv"); 
+
+                    imgDiv.append(img,Name,Price);  
+                        remove.append(Name,a);
+                    count.append(btn1,cnt,btn2);
+                         pricediv.append(Price); 
+                  imageDiv.append(img,remove,count,pricediv)
+                      mainDiv.append(imageDiv);
+                         //console.log(mainDiv);
+                    }) 
+                 
+                 }  
+                 var total = cartItems.reduce(function(ac,cv){
+          return ac + Number(cv.price);
+      },0) 
+
+          document.querySelector("#Total").textContent = total ;
+          localStorage.setItem("TotalPrice" , JSON.stringify(total) );
+    
+    var CheckOut = document.getElementById("checkout").addEventListener("click" , function(){
+         window.location.href = "Checkout.html";
+     })
+
+          
+</script>
+</html>

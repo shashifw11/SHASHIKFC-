@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC-signup</title>
+    <style>
+          #container{
+              max-width : 40%;
+               margin : auto ; 
+               /* height : 500px ;  */
+               /* border : 1px solid red ;  */
+            } 
+             .upper {
+                 width : 100%;
+                 height : 250px; 
+                 /* border : 1px solid blue ;  */
+                 /* margin-top: 20px; ; */
+             }  
+             .upper>div:nth-child(1){
+                margin-bottom: 40px;
+             } 
+             .upper>div:nth-child(3)>p{
+                font-size: 22px;
+             }
+             .upper>div>p{
+                text-align: center;
+                font-weight: bolder;
+                margin-top: 40px;
+             } 
+             .Img{ 
+                 width : 100px;
+                 margin : auto;
+                 /* border : 1px solid red; */
+                 padding: 10px;
+             } 
+             .middle{
+                 width : 50%;
+                 margin:auto ;
+                 /* border : 1px solid red; */
+                 height : 200px  ; 
+                 text-align: center;
+             } 
+             .middle>input{
+                 width : 98%;
+                 padding : 10px ; 
+                 margin : 5px;
+                 margin-left : -10px
+             } 
+             button{ 
+         margin-top: 30px;
+         width : 200px;
+         background-color: #e4002b;
+         border-radius: 30px;
+         padding : 10px ; 
+         border : none ; 
+         color : white ; 
+         font-size: 20px;
+        }    
+        button>a{
+         color : white ; 
+         text-decoration: none;
+        }
+            button:hover{
+                background-color: black;
+                color : white ; 
+            }    
+    </style>
+</head>
+<body>
+    <div id = "container">
+        <div class = "upper">
+            <div><p>Sign In / Sign up</p></div>
+            <div class = "Img">
+                <img 
+                 src="https://login.kfc.co.in/auth/resources/1vkce/login/kfcIndiaLoginUIDev_2021_09_06_12_37/images/KFC_logo.svg"
+                 /> 
+            </div>
+            <div><p>LET’S SIGN IN OR CREATE ACCOUNT WITH YOUR Email Id!
+            </p></div>
+        </div>
+        <div class = "middle">
+            <h1>SignUp</h1>
+            <input  id = "email" type = "email" placeholder = "Enter your email"/>
+            <input id = "mobile" type = "number" placeholder = "Enter your Number"/>
+            <input id = "password" type = "password" placeholder = "Enter your password"/><br/>
+            <button><a href="#">SignUp</a></button>
+        </div>
+        
+    </div>
+</body> 
+<script>
+    document.querySelector("button").addEventListener("click" , addItem); 
+         var userArr = JSON.parse(localStorage.getItem("KFC-UserData"))||[] ; 
+         var userCredentials = {};
+            function addItem(){
+                var email = document.getElementById("email").value ; 
+                   if(email==""){
+                       alert("please Enter the Cridintial")
+                        //  break;
+                   } else{
+                    userCredentials.emailAddresh =email
+                   }
+                var mobile = document.getElementById("mobile").value ;
+                   if(mobile.length != 10){
+                       alert("please Enter 10-digit mobile number")
+                    //    break;
+                   } else{
+                    userCredentials.mobileNo =mobile
+                   }
+                var pass = document.getElementById("password").value;
+                   if(pass.length != 8){
+                    alert("please Enter 8-charactor password")
+                    // break;
+                   } else{
+                    userCredentials.password =pass
+                   }
+               userArr.push(userCredentials);
+                 //console.log(userArr); 
+              
+                   if(userCredentials.emailAddresh == email && userCredentials.mobileNo ==mobile && userCredentials.password ==pass){
+                    localStorage.setItem("KFC-UserData" , JSON.stringify(userArr));
+                    window.location.href = "login.html" ;
+                   } 
+                    //   localStorage.removeItem("KFC-UserData");
+              }
+</script>
+</html>

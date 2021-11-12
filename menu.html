@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script type = "text/javascript">
+        function togglemenu(){
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+    <title>Document</title>
+</head> 
+<style> 
+  body { font-family: sans-serif; }
+     #nav{
+             width : 100%;
+            /* border : 1px solid red ;  */
+             height : 50px; 
+            padding-top: 20px;
+         }
+          .nav1{
+              float: left;
+              width : 25%;
+              margin-left: 3%;
+              /* border: 1px solid red; */
+              /* padding : 25px; */
+              
+          } 
+          .nav2{
+              float: right;
+              width : 20%;
+               margin-right: 5%; 
+               /* border: 1px solid red; */
+              /* padding : 25px; */
+          }
+          .nav1>ul{
+              display : flex ;
+              justify-content:space-between;
+              font-weight: bold;
+              
+          } 
+          .nav2>ul{
+              display : flex ;
+              justify-content: space-around;
+              font-weight: bold;
+        }  
+        li{
+            list-style: none;
+        } 
+       a{
+            text-decoration: none;
+            color : black ; 
+        } 
+
+    .mid{
+        width : 100%;
+        height: 30px;
+        background-color: #202124;
+        color : white ; 
+         padding: 25px;
+        text-align: center;
+        
+      }  
+      
+      button{
+           width : 200px;
+         background-color: red;
+          border-radius: 30px;
+          padding : 10px ; 
+          border : none ; 
+          color : white ; 
+          font-size: 20px;
+      } 
+       .midBottom{
+           background-color: #f8f7f5;
+           width : 100%;
+           height : 100px;
+           margin-top: -23px;
+       }    
+         
+        *{
+             margin : 0;
+             padding : 0 ;
+         } 
+         /* body { font-family: sans-serif; } */
+        #sidebar{
+            position :fixed;
+            margin-top: 60px;
+            width : 18%;  
+            height : auto; 
+            /* left : -18% ; */
+            background-color: white;   
+             /* border : 1px solid red ;  */
+             
+           
+        }  
+        #sidebar li{
+            color : #626262;
+            font-size: 17px;
+            padding : 20px ; 
+            /* border-bottom: 1px solid gray ; */
+            text-align: left;
+            margin-left: 70px;
+            background-color: white ; 
+        }   
+        #sidebar li:hover{
+            background-color : whitesmoke;
+            color :  gray;
+            font-size: 17px ;
+            border :none ; 
+        }  
+        
+        .toggle-btn {
+            position : absolute ; 
+            left :  105% ;
+            top : 15px ;  
+
+        }
+        .toggle-btn span{
+                display : block ; 
+                background-color : black ; 
+                width : 30px ; 
+                height : 5px ; 
+                margin : 3px;
+            } 
+        #sidebar.active {
+            left : 0 ; 
+         }  
+
+         #product{  
+            display : grid;
+            grid-template-columns: auto auto;
+            
+            grid-gap : 3%; 
+            width : 60% ;
+            height : 2900px ;  
+            margin-top: 15%;
+            margin-right: 5%;
+            float : right ; 
+            /* border : 1px solid red; */
+             border-top: 2px solid gray;
+             background-color: #f8f7f5;
+             padding : 30px ; 
+          }   
+
+          #search {
+             margin-top: 30px;
+          } 
+
+          /* body{
+            margin : 0;
+            padding : 0;
+
+        }  */
+         .search-box{
+             position : absolute ; 
+             top : 50% ; 
+             left : 50%;
+             transform : translate(-50%,-50%) ; 
+             background-color: white; 
+             /* #2f3640 */
+             height : 40px ; 
+             border-radius: 40px ; 
+             padding : 10px ;
+             border : 1px solid black ;
+
+         } 
+         .search-box:hover>.search-text{
+             width : 240px ; 
+             padding : 0 6px ; 
+
+         } 
+         .search-box:hover>.search-btn{
+             background-color: white;
+             
+         }
+          .search-btn{
+            color : #e84118 ;  
+            float : right ; 
+            width : 40px ; 
+            height : 40px ; 
+            border-radius : 50% ; 
+            background-color: #2f3640;
+            display : flex ;
+            justify-content: center;
+            align-items: center; 
+            transition: 0.4s;
+          }  
+           .search-text{
+               border : none ; 
+               background: none;
+               outline : none;
+               float : left ; 
+               padding : 0; 
+               color : black; 
+               font-size: 16px ;
+               transition: 0.4s;
+               line-height : 40px;
+               width : 240px ; 
+
+           }
+          /* #product{
+            width : 90%;
+            display : grid;
+            grid-template-columns: auto auto;
+            grid-gap : 3%;
+            margin-left: 20%;
+        }  */
+         img{
+             width : 100%;
+             border-radius: 5px; 
+         } 
+          #btn{
+              margin-left: 25% ; 
+          } 
+          h3{
+               color : teal;
+          } 
+           h2{
+               color : red ;
+           } 
+        h6{
+            color : gray ; 
+        }   
+         
+         #btn:hover{
+             background-color: white;
+             color : black;
+             border : 1px solid black;
+             
+         }
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        .footer{
+           background-color: #24262b;
+            margin : 0;
+            padding : 0; 
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }  
+        .contant{
+            max-width : 100% ; 
+           
+            margin : auto ; 
+        } 
+         ul{
+            list-style : none ;   
+         }  
+          .row{
+              display : flex ; 
+              flex-wrap: Nowrap;
+          }  
+
+          .footer-col{
+              width : 25% ; 
+              padding : 0 15px ; 
+          } 
+          .footer-col h4{
+               font-size: 18px;
+               color : #ffffff;
+               text-transform: capitalize;
+               margin-bottom: 35px; 
+               font-weight: 500; 
+               position: relative;
+          }
+
+
+          .footer-col h4::before{
+              content : ' ';
+              position : absolute; 
+              left : 0;
+              bottom : -10px ; 
+              background-color: #e91e63; 
+              height : 2px ; 
+              box-sizing: border-box;
+              width : 50px;
+              
+          }
+           .footer-col ul li:not(:last-child){
+                margin-bottom : 10px ; 
+           } 
+           .footer-col ul li a{
+                font-size: 16px; 
+                text-transform: capitalize;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 300px;
+                color : #bbbbbb;
+                display: block;
+                transition: all 0.3s ease;
+           }
+               .footer-col ul li a:hover{
+                   color: #ffffff;
+                   padding-left: 10px;
+               } 
+
+               .footer-col .social-link a{
+                     display: inline-block;
+                     height: 40px;
+                     width : 40px; 
+                     background-color: rgb(225,225,225,0.2);
+                     margin-right: 10px;
+                     margin: 0 10px 10px 0;
+                     text-align: center;
+                     line-height: 40px;
+                     border-radius: 50%;
+                     color : #ffffff ;  
+                     transition: all 0.5s ease;
+               }  
+                
+               .footer-col .social-link a:hover{
+                   color : #24262b;
+                   background-color: #ffffff;
+                   
+               } */
+</style>
+<body>
+    <div id = "nav">
+        <div class = "nav1">
+            <ul>
+                <a href = "HOMEpage.html"><li><img
+                 src= "https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt = "KFC"/></li></a>
+                 <a href = "menu.html"><li>Menu</li></a>
+                 <a href = "deals.html"><li>Deals</li></a>
+            </ul>
+         </div> 
+         <div class = "nav2">
+             <ul>
+              <a href="SignIn.html"><li><i style = "font-size: 35px" class="fas fa-user-circle"></i>Sign In</li></a>
+              <a href="MyCart.html"><li>Cart<i style = "font-size: 30px ; color : tomato" class="fas fa-shopping-cart"></i>Cart</li></a>
+         </ul>
+         </div> 
+    </div> 
+    <div class = "mid" >
+        <h4>LET'S ORDER FOR DELIVERY, TAKEAWAY, OR DINE-IN<button><a href="order.html" style = "color : white">start order</a></button></h4>
+    </div>   
+       
+    <h1 style = "text-align :left ; margin-left: 87px ; margin-top : 20px; position  : fixed">KFC MENU</h1>
+     <div id = "sidebar" > 
+      
+        <a href = "#"><div class = "toggle-btn" onclick="togglemenu()">
+           <span></span>
+           <span></span>
+           <span></span>
+        </div></a>
+           <ul>
+             <a href = "#"><li>Bucket Meals</li></a>
+             <a href = "#"><li>Trending</li></a>
+             <a href = "#"><li>Burgers</li></a>
+             <a href = "#"><li>Rice Bowlz</li></a>
+             <a href = "#"><li>Snacks</li></a>
+             <a href = "#"><li>Beverages</li></a>
+           </ul> 
+           
+  </div>   
+  
+<div id = "search">
+      <div class = "search-box">
+           <input class = "search-text" type = "text" name = "" placeholder = "search our menu"/>
+         <a class = "search-btn" href = "#">
+            <i class="fas fa-search"></i>
+          </a>
+      </div> 
+    
+</div>
+   <div id = "product">
+    <!-- <hr  style = "color : gray"/> --> 
+  
+</div> 
+
+
+</body> 
+<script>
+      var data = [
+    {
+      name: "Match Time Feast",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33046-0.jpg?ver=3.89",
+      price: "749.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips . ",
+    },
+    {
+        name: "Hat-Trick Combo",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33047-0.jpg?ver=3.89",
+      price: "557.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips. "
+    },
+    {
+        name: "5pc Leg Piece Bucket Meal",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32773-0.jpg?ver=3.89",
+      price: "654.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips . "
+    },
+    {
+        name: "10pc Leg Piece Bucket & 4 Dips",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32775-0.jpg?ver=3.89",
+      price: "675.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips. "
+    },
+    {
+        name: "Friendship Bucket",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30908-0.jpg?ver=3.89",
+      price: "457.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips . ",
+    },
+    {
+        name: "Bucket for Two",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31946-0.jpg?ver=3.89",
+      price: "675.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips. "
+    },
+    {
+        name: "5pc Leg Piece Bucket & 2 Dips",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33046-0.jpg?ver=3.89",
+      price: "456.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips . "
+    },
+    {
+        name: "Ultimate Savings Bucket",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30865-0.jpg?ver=3.89",
+      price: "675.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips . "
+    },
+    {
+        name: "Big 12",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30872-0.jpg?ver=3.89",
+      price: "456.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3] "
+    },
+    {
+        name: "Mingles Bucket Meal",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33046-0.jpg?ver=3.89",
+      price: "543.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3] "
+    },
+    {
+        name: "8 pc Hot & Crispy Chicken",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30865-0.jpg?ver=3.89",
+      price: "786.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3] "
+    },
+    {
+        name: "5pc Smoky Red Chicken",
+      type: "Non veg",
+      image_url:
+        "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30872-0.jpg?ver=3.89",
+      price: "563.00", 
+        Review : "Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3] "
+    },
+  ];
+  var body = document.querySelector("body");
+        var maindiv = document.getElementById("product");
+          maindiv.setAttribute("id" , "product");
+          body.appendChild(maindiv);
+              showproduct();
+  var cart = JSON.parse(localStorage.getItem("KFC-cartItems")) || [] ; 
+      function showproduct(){
+          data.map(function(item){
+              var imagediv = document.createElement("div");
+              var img = document.createElement("img");
+                img.setAttribute("src" , item.image_url);
+              var name = document.createElement("h3");
+               name.textContent = item.name ;
+              var price = document.createElement("h2");
+                  price.textContent = item.price ; 
+            
+              var type = document.createElement("h5"); 
+                  type.textContent = item.type;
+             var review = document.createElement("h6");
+                 review.textContent = item.Review ;
+              var btn = document.createElement("button");
+                 btn.setAttribute("id" , "btn");
+                 btn.textContent = "Add to Cart";
+                   btn.addEventListener("click",function(){
+                         addToCart(item);
+                   })
+            imagediv.append(img,name,type,price,review,btn);
+                maindiv.append(imagediv);
+          }) 
+           localStorage.removeItem("KFC-cartItems") ;
+      }  
+
+      function addToCart(item){
+          cart.push(item);
+        localStorage.setItem("KFC-cartItems" , JSON.stringify(cart));
+        
+      }  
+
+      // document.querySelector("button").addEventListener("click" , function(){
+      //     window.location.href= "cart.html"; 
+      //     localStorage.removeItems('KFC-cartItems');
+      // })
+ </script>
+</html>

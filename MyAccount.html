@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+   
+    <title>Document</title> 
+    <style>
+         body { font-family: sans-serif; }
+     #nav{
+             width : 100%;
+            /* border : 1px solid red ;  */
+             height : 50px; 
+            padding-top: 20px;
+         }
+          .nav1{
+              float: left;
+              width : 25%;
+              margin-left: 3%;
+              /* border: 1px solid red; */
+              /* padding : 25px; */
+              
+          } 
+          .nav2{
+              float: right;
+              width : 20%;
+               margin-right: 5%; 
+               /* border: 1px solid red; */
+              /* padding : 25px; */
+          }
+          .nav1>ul{
+              display : flex ;
+              justify-content:space-between;
+              font-weight: bold;
+              
+          } 
+          .nav2>ul{
+              display : flex ;
+              justify-content: space-around;
+              font-weight: bold;
+        }  
+        li{
+            list-style: none;
+        } 
+       a{
+            text-decoration: none;
+            color : black ; 
+        } 
+
+    .mid{
+        width : 100%;
+        height: 80px;
+        background-color: #202124;
+        color : white ; 
+         padding-top: 3px;
+        margin-top: 15px; 
+        text-align: center;
+        
+      }  
+      
+      button{
+         width : 200px;
+         background-color: red;
+         border-radius: 30px;
+         padding : 10px ; 
+         border : none ; 
+         color : white ; 
+         font-size: 20px;
+         
+      }   
+       .container {
+           max-width : 90%;
+           margin : auto ; 
+           /* border : 1px solid red ; */
+           height : 500px ;  
+           display : flex; 
+           margin-top: 50px ; 
+          
+         }  
+           .left{
+               width : 28% ;
+               background-color: #202124;;
+               /* border : 1px solid red ;  */
+               border-radius: 10px ; 
+               margin-right : 7%;
+
+           } 
+           .right{
+               width : 65% ;
+               /* border : 1px solid blue ;  */
+           } 
+           .left-inner{
+               width : 80%;
+               height : 70%;
+               /* margin-left: 20%; */
+               margin-right: 15%;;
+               margin-top: 10%;
+               /* border : 1px solid white; */
+           }  
+           .left-inner>div>h2{
+               color : white ;
+               line-height: 35px;;
+               margin-left: 18%;
+               margin-top: 50px;;
+           } 
+           .left-inner ul{
+               margin-top: 60px;
+               /* border : 1px solid white ;  */
+                width : 70% ; 
+           } 
+            
+         .left-inner li{
+              color : #88898a ;
+              margin : 0;
+              padding: 0;
+              margin-top: 30px ;
+              text-decoration: none;
+              margin-left: 0px;;
+              list-style: none;
+        }  
+          .btn{
+        width : 100px;
+         background-color: black;
+         border-radius: 30px;
+         padding : 5px ; 
+         border : none ; 
+         color : white ; 
+         font-size: 16px;
+         border : 1px solid white ; 
+         margin-left: 40px;;
+          } 
+           .btn>a{
+               color : white ;
+                text-decoration: none;;
+           } 
+           .box1{
+               display : flex ; 
+           } 
+            .box1>div{
+                width : 33%;
+                /* border : 1px solid black ; */
+                height : 50px ; 
+            } 
+            .box1>div:nth-child(2){
+                width : 43%;
+                text-align: right ;
+            } 
+     .lookbtn{
+         width : 150px;
+         background-color: white;
+         border-radius: 30px;
+         padding : 5px ; 
+         border : none ; 
+         color : black ; 
+         font-size: 16px;
+         border : 1px solid black; 
+         margin-left: 40px;;
+         margin-top: 10px;;
+            } 
+            .viewbtn{
+        width : 150px;
+         background-color: black;
+         border-radius: 30px;
+         padding : 10px ; 
+         border : none ; 
+         color : white ; 
+         font-size: 16px;
+         border : 1px solid white ; 
+         margin-left: 40px;;
+         margin-top: 20px;;
+          }   
+           .viewbtn>a{
+              text-decoration: none;
+              color : white ; 
+           }
+          .box2{
+              display :flex;
+          } 
+           .box2>div{
+               width : 50%;
+               /* border : 1px solid red ;  */
+               height : 70px ; 
+           } 
+           .box2>div>h2,.box2>div>h4{
+                 line-height: 5px;
+                 margin-left: 50px;;
+           } 
+           .helpbtn{
+            width : 150px;
+         background-color: white;
+         border-radius: 30px;
+         padding : 10px ; 
+         border : none ; 
+         color : black ; 
+         font-size: 16px;
+         border : 1px solid black ; 
+         margin-right: 40px;;
+         margin-top: 20px;;
+         float: right;
+           }  
+           
+           
+           @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        .footer{
+             background-color: #24262b;
+               margin : 0;
+              padding : 0; 
+              box-sizing: border-box;
+              font-family: 'Poppins', sans-serif;
+             height : 300px ; 
+             margin-top: 100px;
+  
+          }  
+          .contant{
+              width : 100% ; 
+              margin : auto ; 
+          } 
+           ul{
+              list-style : none ;   
+           }  
+            .row{
+                display : flex ; 
+                flex-wrap: nowrap;
+            }  
+  
+            .footer-col{
+                width : 25% ; 
+                padding : 0 15px ; 
+            } 
+            .footer-col h4{
+                 font-size: 18px;
+                 color : #ffffff;
+                 text-transform: capitalize;
+                 margin-bottom: 35px; 
+                 font-weight: 500; 
+                 position: relative;
+            }
+  
+  
+            .footer-col h4::before{
+                content : ' ';
+                position : absolute; 
+                left : 0;
+                bottom : -10px ; 
+                background-color: #e91e63; 
+                height : 2px ; 
+                box-sizing: border-box;
+                width : 50px;
+                
+            }
+             .footer-col ul li:not(:last-child){
+                  margin-bottom : 10px ; 
+             } 
+             .footer-col ul li a{
+                  font-size: 16px; 
+                  text-transform: capitalize;
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-weight: 300px;
+                  color : #bbbbbb;
+                  display: block;
+                  transition: all 0.3s ease;
+             }
+                 .footer-col ul li a:hover{
+                     color: #ffffff;
+                     padding-left: 10px;
+                 } 
+  
+                 .footer-col .social-link a{
+                       display: inline-block;
+                       height: 40px;
+                       width : 40px; 
+                       background-color: rgb(225,225,225,0.2);
+                       margin-right: 10px;
+                       margin: 0 10px 10px 0;
+                       text-align: center;
+                       line-height: 40px;
+                       border-radius: 50%;
+                       color : #ffffff ;  
+                       transition: all 0.5s ease;
+                 }  
+                  
+                 .footer-col .social-link a:hover{
+                     color : #24262b;
+                     background-color: #ffffff;
+                     
+                 } 
+    </style>
+</head>
+<body>
+    <div id = "nav">
+        <div class = "nav1">
+            <ul>
+                <a href = "HOMEpage.html"><li><img
+                 src= "https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt = "KFC"/></li></a>
+                 <a href = "menu.html"><li>Menu</li></a>
+                 <a href = "deals.html"><li>Deals</li></a>
+            </ul>
+         </div> 
+         <div class = "nav2">
+             <ul>
+              <a href="SignIn.html"><li><i style = "font-size: 35px" class="fas fa-user-circle"></i>Sign In</li></a>
+              <a href="MyCart.html"><li>Cart<i style = "font-size: 30px ; color : tomato" class="fas fa-shopping-cart"></i></li></a>
+         </ul>
+         </div> 
+    </div> 
+    <div class = "mid" >
+        <h4>LET'S ORDER FOR DELIVERY, TAKEAWAY, OR DINE-IN<button><a href="order.html" style = "color : white">start order</a></button></h4>
+    </div>    
+   <div class = "container">
+      <div class  = "left">
+          <div class = "left-inner">
+              <div>
+                  <h2>GOOD EVENING KFC LOVER!</h2>
+              </div>
+              <div>
+                  <ul>
+                    <a href = "#"><li>Order History</li></a>
+                    <a href = "#"><li>My Favorite Menu</li></a>
+                    <a href = "#"><li>Addresses</li></a>
+                    <a href = "#"><li>Account Setting</li></a>
+                    
+                  </ul>
+              </div>
+          </div> 
+          <button class = "btn"><a href = "signup.html">Sign Out</a></button>
+      </div>
+      <div class = "right">
+          <div class = "right1">
+             <div class = "box1">
+                 <div><h4 style = "text-align: center;" >ORDER HISTORY</h4></div>
+                 <div><h5>
+                    Looking for a specific order?</h5></div>
+                 <div><button class = "lookbtn"><a href = "#">Order Lookup</a></button>
+             </div>
+          </div>  
+           <h3 style = "color : #88898a ; margin-top : 60px ; margin-left : 45px">No orders have been placed in the past 12 months.</h3>
+             <button class = "viewbtn" ><a href = "menu.html">View Minu</a></button>
+        </div>  
+        <hr style = "margin-top : 50px "/>
+        <div class = "right2">
+            <div class = box2>
+                <div>
+                    <h2>HAVE A QUESTION?</h2>
+                    <h4>Connect with a specialist for answers.</h4>
+                </div>
+                <div>
+                    <button class = "helpbtn"><a href = "help.html">Get Help</a></button>
+                </div>
+            </div>
+        </div>
+    </div> 
+  </div> 
+  <footer class = "footer">
+    <div class = "contant">
+        <div class = "row">
+           <div class = "footer-col">
+               <h4>KFC Food</h4>
+               <ul>
+                   <li><a href = "menu.html">Menu</a></li>
+                   <li><a href = "#">Order Lookup</a></li>
+                   <li><a href = "#">Gift card</a></li>
+                   
+               </ul>
+           </div> 
+           <div class = "footer-col">
+            <h4>Support</h4>
+            <ul>
+                   <li><a href = "help.html">Get Help</a></li>
+                   <li><a href = "#">Contact Us</a></li>
+                   <li><a href = "#">KFC Feedback</a></li>
+                   
+            </ul>
+        </div>
+        <div class = "footer-col">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href = "#">Terms and Condition</a></li>
+                   <li><a href = "#">Privecy policy</a></li>
+                   <li><a href = "#">Disclamer</a></li>
+                   <li><a href = "#">Coution Notice</a></li>
+                   
+            </ul>
+        </div>
+        <div class = "footer-col">
+            <h4>KFC india</h4>
+            <ul>
+                <li><a href = "#">About KFC</a></li>
+                <li><a href = "#">KFC Care</a></li>
+                <li><a href = "#">Careers</a></li>
+               
+            </ul>
+        </div> 
+        <div class = "footer-col">
+            <h4>follow Us</h4>
+            <div class = "social-link">
+                <a href = "#"><i class = "fab fa-facebook-f"></i></a> 
+                <a href = "#"><i class = "fab fa-twitter"></i></a> 
+                <a href = "#"><i class = "fab fa-instagram"></i></a> 
+                <a href = "#"><i class = "fab fa-linkedin-in"></i></a> 
+            </div>
+        </div>
+        </div>
+
+    </div> 
+</footer>
+</body>
+</html>
+

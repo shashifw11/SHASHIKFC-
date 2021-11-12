@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+    <title>Document</title> 
+    <style>
+        .header{
+            display : flex;
+            width : 100% ; 
+            height : 70px ; 
+            border-bottom: 2px solid gray;
+            /* position:fixed ; */
+        } 
+        .header>div{
+            width : 33% ; 
+            justify-content :space-around ;
+            /* border : 1px solid red ;  */
+        } 
+        .kfc {
+            text-align: center;
+            padding-top : 30px ; 
+        }  
+         .cartbtn{
+             text-align: center ;
+             padding-top: 15px ;
+         }
+         .cartbtn>button{
+            width : 200px;
+         background-color: white;
+          border-radius: 30px;
+          padding : 10px ; 
+          border : none ; 
+          color : black ; 
+          font-size: 20px;
+          border : 1px solid black; 
+          }  
+
+          .cartbtn>button>a{
+             color : black ; 
+             text-decoration: none;
+          } 
+          .cartbtn>button>a:hover{
+              color : white
+          }
+         .cartbtn>button:hover{
+             background-color: black;
+             color : white ; 
+         }    
+         .right{
+             display : flex;
+         } 
+         .right>div{
+             width : 50% ; 
+             /* border : 1px solid red ;  */
+             text-align: center;
+             padding-top: 25px;;
+             font-size: 20px;
+         } 
+         .right>div:nth-child(2){
+             font-size: 25px;
+         } 
+          .right div a{
+              text-decoration: none;
+              color : black ; 
+          }  
+
+          .tag{
+              width : 100%;
+              height:100px;
+              /* border : 1px solid red; */
+          }
+          .container{
+              display : flex ; 
+              width : 75% ;
+              margin : auto ; 
+              /* border : 1px solid red ;  */
+              margin-top: 40px;;
+             
+              
+            } 
+            .container>div{
+              width : 60% ;
+              /* border : 1px solid blue ;; */
+              /* height : auto ; */
+             
+            } 
+            .container>div:nth-child(2){
+                width : 35% ;
+                /* border : 1px solid blue ; */
+                /* height : 200px ;  */
+                margin-left: 5%;
+            } 
+            .item{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 15px;
+    height : 270px ; 
+    padding : 10px ;  
+    margin-top: 120px;
+} 
+ 
+    .subtotal {
+        display : flex ;
+        /* width : 100%; */
+        
+    } 
+     .subtotal div {
+          width : 48% ; 
+          height : 30px ; 
+          /* border : 1px solid red ;  */
+          margin-left: 5px;;
+          text-align: left;
+     } 
+     .subtotal>div:nth-child(2){
+         text-align: right ;
+         margin-right: 10px;
+     }
+     .gst {
+        display : flex ;
+        /* width : 100%; */
+        
+    } 
+     .gst div {
+          width : 48% ; 
+          height : 30px ; 
+          /* border : 1px solid red ;  */
+          margin-left: 5px;;
+          text-align: left;
+     } 
+     .gst>div:nth-child(2){
+         text-align: right ;
+         margin-right: 10px;
+     }
+     #checkout{ 
+         background-color: #e4002b;
+         width : 80%;
+        padding : 15px; 
+        margin : 20px 0 0 30px ; 
+        border-radius: 30px;
+        border : none ;
+       
+    } 
+    #checkout>a{
+        color : white ; 
+        text-decoration: none;
+    }  
+    .lower>div:nth-child(2)>a{ 
+        color: black;
+        }
+    .upper{
+        display : flex ;
+        /* border : 1px solid red ; */
+        background-color: #f8f7f5;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        border-radius: 10px;
+     } 
+    .upper>div{
+        width : 40%;
+        text-align: center;
+    } 
+    .upper>div:nth-child(2){
+        width : 60%;
+        text-align: justify;
+    } 
+    .middle{
+        display : flex ;
+        /* border : 1px solid red ; */
+        background-color: #f8f7f5;
+        height : 300px ;
+        justify-content: space-between;
+        margin-top: 20px ;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        border-radius: 10px;
+    } 
+     .middle>div{
+        width : 30%;
+        text-align: center;
+        /* border : 1px solid red ;  */
+     } 
+     .middle>div:nth-child(2){
+        width : 60%;
+        text-align: justify;
+    }   
+
+  #form>input{
+      width : 200px ; 
+      border-style  :none;
+      border-bottom: 1px solid black;
+      background-color: #f8f7f5;
+
+  }
+    #form{
+        margin-top: 30px;
+    }
+    .lower{
+        display : flex ;
+        /* border : 1px solid red ; */
+        background-color: #f8f7f5;
+        height : 80px ;
+        justify-content: space-between;
+        margin-top: 20px ;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+           border-radius: 10px;
+    }
+     .lower div{
+         width : 50%;
+         /* border : apx solid red ;  */
+         text-align: center;
+     } 
+     .lower div:nth-child(2){
+         margin-top: 20px ; ;
+     }
+    </style>
+</head>
+<body>
+   <div class = "header">
+       <div class = "cartbtn">
+           <button><a href = "MyCart.html">Back to Cart</a></button>
+       </div>
+       <div class = "kfc">
+           <a href="HOMEpage.html"><img 
+              src = "https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg"
+           /></a>
+       </div>
+       <div class = "right">
+           <div><i class="far fa-question-circle"></i><a href = "help.html">Need help</a><i class="fas fa-question"></i></div>
+           <div> <i class="fas fa-user-circle"></i><a href = "MyAccount.html">Account</a></div>
+       </div>
+   </div> 
+  <div class = "container">
+   
+      <div class = "payment">
+        <div class  = "tag"><h1>CHECKOUT</h1></div>
+          <div class = "upper">
+              <div><h1>PICKUP OPTIONS</h1></div>
+              <div >
+                  <h3><input type = "checkbox"/>Pick up from the store</h3>
+                  <h4><input type = "checkbox"/>KFC to Your Car
+                    Avoid the hassle of walking into crowded places. We'll come to you.</h4>
+              </div>
+          </div>
+          <div class = "middle">
+              <div class = "contact"><h2>CONTACT INFO</h2></div>
+              <div class = "details">
+                  <form id = "form">
+                      <lable>Full Name</lable><br/><br/>
+                      <input id = "name" type = "text"  placeholder = "Enetr your name"/><br/><br/>
+                      <lable>Phone Number</lable><br/><br/>
+                      <input id = "mobile" type = "Number"  placeholder = "Enetr your mobile number"/><br/><br/>
+                      <lable>Email</lable><br/><br/>
+                      <input id = "email" type = "text"  placeholder = "Enter your Email Address"/>
+                  </form>
+              </div>
+          </div>
+          <div class = "lower">
+              
+                  <div><h2>PAYMENT</h2></div>
+                  <div><a href = "#">Add Payment Method</a></div>
+              
+          </div>
+      </div> 
+
+
+      <div class = "item">
+
+        <h3 style = "margin-left : 10px "> Count ITEMS</h3>
+        <div class = "apply">
+            <h3 style = "margin-left: 5px; color : red">Apply offers & Deals <button style = "width : 90px ; padding : 5px ; border-radius: 20px; border : 1px solid black ; "><a  style = "color : black ;text-decoration: none;" href = "deals.html">View All</a></button></h3>
+        </div>
+        <div   class = "subtotal">
+            <div>SubTotal</div>
+            <div id = "total"></div>
+        </div> 
+        <div   class = "gst">
+            <div>GST</div>
+            <div>%</div>
+        </div>
+        <hr/>
+        
+     <button id = "checkout"> <a href = "#">Continue to payment</a></button>
+    
+  </div>  
+</body>
+<script>
+      var totalprice = JSON.parse(localStorage.getItem("TotalPrice")) 
+         document.querySelector("#total").textContent = totalprice ; 
+         document.querySelector("form").addEventListener("submit",details)
+        var details = JSON.parse(localStorage.getItem("KFC-userdetails")) || [] ;
+                    // adddetails()
+          function adddetails(e){
+            e.PreventDefault();
+            var userobj = {
+            userName : document.getElementById("name").value,
+            userMobile : document.getElementById("mobile").value,
+            userEmail : document.getElementById("email").value,
+            }   
+            details.push(userobj); 
+            localStorage.setItem("KFC-userdetails" , JSON.stringify(details));
+          } 
+
+          document.querySelector("#checkout").addEventListener("click", function(){
+            localStorage.setItem("KFC-userdetails" , JSON.stringify(details));      
+            window.location.href = "KFCpayment.html"
+          })
+</script>
+</html>
